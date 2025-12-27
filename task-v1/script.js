@@ -176,4 +176,48 @@
   } else {
     initSchoolSelectionSlider();
   }
+
+  // Sticky Header on Scroll
+  function initStickyHeader() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    let lastScrollTop = 0;
+    const scrollThreshold = 100; // Scroll distance to trigger sticky
+
+    function handleScroll() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > scrollThreshold) {
+        header.classList.add("header--sticky");
+      } else {
+        header.classList.remove("header--sticky");
+      }
+
+      lastScrollTop = scrollTop;
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial check
+    handleScroll();
+  }
+
+  // Initialize sticky header
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initStickyHeader);
+  } else {
+    initStickyHeader();
+  }
 })();
