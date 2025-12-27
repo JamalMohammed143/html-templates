@@ -182,7 +182,6 @@
     const header = document.querySelector(".header");
     if (!header) return;
 
-    let lastScrollTop = 0;
     const scrollThreshold = 100; // Scroll distance to trigger sticky
 
     function handleScroll() {
@@ -194,8 +193,6 @@
       } else {
         header.classList.remove("header--sticky");
       }
-
-      lastScrollTop = scrollTop;
     }
 
     // Throttle scroll events for better performance
