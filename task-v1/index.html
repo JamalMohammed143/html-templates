@@ -29,7 +29,7 @@
                 aria-hidden="true"
               >
                 <path
-                  d="M15 10L5 5V15L15 10Z"
+                  d="M5 15L15 5M15 5H5M15 5V15"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
@@ -104,7 +104,7 @@
                   </div>
                   <div class="hero__center-slider-item">
                     <img
-                      src="imgs/student-5.jpg"
+                      src="imgs/student-5.avif"
                       alt="Hero center slider item 3"
                     />
                   </div>
@@ -252,7 +252,7 @@
                     aria-hidden="true"
                   >
                     <path
-                      d="M15 10L5 5V15L15 10Z"
+                      d="M5 15L15 5M15 5H5M15 5V15"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -708,10 +708,7 @@
                 <span class="exhibition__title-line">School Appointments</span>
               </h2>
               <p class="exhibition__tagline">To Avoid Rush</p>
-              <button
-                class="header__register-btn exhibition__btn"
-                type="button"
-              >
+              <button class="header__register-btn" type="button">
                 <span class="header__register-btn-text">
                   <svg
                     width="20"
@@ -732,20 +729,13 @@
                 </span>
               </button>
             </div>
-            <div class="exhibition__image-wrapper">
-              <img
-                src="imgs/exhibition.avif"
-                alt="School exhibition with parents and representatives"
-                class="exhibition__image"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       <!-- School Selection Section -->
       <section class="school-selection" aria-label="School selection">
-        <div class="school-selection__container container">
+        <div class="school-selection__container">
           <h2 class="school-selection__title">
             What Makes This Exhibition a Must-Visit
           </h2>
@@ -933,6 +923,7 @@
                 class="school-selection__control-btn school-selection__control-btn--prev"
                 aria-label="Previous slide"
                 type="button"
+                disabled
               >
                 <svg
                   width="24"
