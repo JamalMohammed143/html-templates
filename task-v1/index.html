@@ -15,7 +15,7 @@
 
     <header class="header">
       <div class="header__container container">
-        <div class="header__logo">
+        <div class="header__logo logo__box">
           <img src="imgs/logo.jpg" alt="Premier Schools Exhibition Logo" />
         </div>
         <div class="header__actions">
@@ -263,6 +263,49 @@
                 </span>
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Statistics">
+        <div class="stats__container">
+          <div class="stats__grid">
+            <article class="stats__card">
+              <div class="stats__wreath stats__wreath--left"></div>
+              <div class="stats__wreath stats__wreath--right"></div>
+              <div class="stats__content">
+                <p class="stats__label">Trusted by</p>
+                <p class="stats__number">1 Million+</p>
+                <p class="stats__label">Parents</p>
+              </div>
+            </article>
+            <article class="stats__card">
+              <div class="stats__wreath stats__wreath--left"></div>
+              <div class="stats__wreath stats__wreath--right"></div>
+              <div class="stats__content">
+                <p class="stats__number">22+</p>
+                <p class="stats__number">Years</p>
+                <p class="stats__label">of Legacy</p>
+              </div>
+            </article>
+            <article class="stats__card">
+              <div class="stats__wreath stats__wreath--left"></div>
+              <div class="stats__wreath stats__wreath--right"></div>
+              <div class="stats__content">
+                <p class="stats__number">500+</p>
+                <p class="stats__label">Participating</p>
+                <p class="stats__label">Schools</p>
+              </div>
+            </article>
+            <article class="stats__card">
+              <div class="stats__wreath stats__wreath--left"></div>
+              <div class="stats__wreath stats__wreath--right"></div>
+              <div class="stats__content">
+                <p class="stats__number">17 Cities</p>
+                <p class="stats__label">Across the</p>
+                <p class="stats__label">Globe</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -653,116 +696,241 @@
       </section>
 
       <!-- Exhibition Section -->
-      <section class="exhibition" aria-label="Exhibition highlights">
+      <section class="exhibition" aria-label="Pre-schedule appointments">
         <div class="exhibition__container">
-          <h2 class="exhibition__title">Exhibition Highlights</h2>
+          <div class="exhibition__content">
+            <div class="exhibition__text">
+              <p class="exhibition__subtitle">
+                Exciting Opportunities for Parents!
+              </p>
+              <h2 class="exhibition__title">
+                <span class="exhibition__title-line">Pre-schedule Your</span>
+                <span class="exhibition__title-line">School Appointments</span>
+              </h2>
+              <p class="exhibition__tagline">To Avoid Rush</p>
+              <button
+                class="header__register-btn exhibition__btn"
+                type="button"
+              >
+                <span class="header__register-btn-text">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 15L15 5M15 5H5M15 5V15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  PRE-SCHEDULE NOW
+                </span>
+              </button>
+            </div>
+            <div class="exhibition__image-wrapper">
+              <img
+                src="imgs/exhibition.avif"
+                alt="School exhibition with parents and representatives"
+                class="exhibition__image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- School Selection Section -->
+      <section class="school-selection" aria-label="School selection">
+        <div class="school-selection__container container">
+          <h2 class="school-selection__title">
+            What Makes This Exhibition a Must-Visit
+          </h2>
           <div
-            class="exhibition__slider"
+            class="school-selection__slider"
             role="region"
-            aria-label="Exhibition highlights slider"
+            aria-label="School selection cards slider"
           >
-            <div class="exhibition__track">
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=400&fit=crop"
-                    alt="School admission process"
-                    class="exhibition__image"
-                  />
+            <div class="school-selection__track">
+              <article class="school-selection__card" role="listitem">
+                <div class="school-selection__icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="12"
+                      cy="7"
+                      r="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 11v4M12 15h4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Admission Process</h3>
-                  <p class="exhibition__card-description">
-                    Learn about the streamlined admission process and
-                    requirements.
-                  </p>
-                </div>
+                <h3 class="school-selection__card-title">
+                  Interact Directly with School Heads
+                </h3>
+                <p class="school-selection__card-description">
+                  Get answers straight from the experts
+                </p>
               </article>
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop"
-                    alt="School facilities tour"
-                    class="exhibition__image"
-                  />
+              <article class="school-selection__card" role="listitem">
+                <div class="school-selection__icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 2v6h6M16 13H8M16 17H8M10 9H8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Facilities Tour</h3>
-                  <p class="exhibition__card-description">
-                    Explore state-of-the-art facilities and infrastructure.
-                  </p>
-                </div>
+                <h3 class="school-selection__card-title">
+                  Compare Curriculum & Pedagogy
+                </h3>
+                <p class="school-selection__card-description">
+                  Understand the differences between CBSE, ICSE, IB, Cambridge,
+                  Finnish & more
+                </p>
               </article>
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&h=400&fit=crop"
-                    alt="Meet school representatives"
-                    class="exhibition__image"
-                  />
+              <article class="school-selection__card" role="listitem">
+                <div class="school-selection__icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M12 2L14 8L20 10L14 12L12 18L10 12L4 10L10 8L12 2Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 7h6M9 17h6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="9" cy="7" r="1" fill="currentColor" />
+                    <circle cx="15" cy="17" r="1" fill="currentColor" />
+                  </svg>
                 </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Meet Representatives</h3>
-                  <p class="exhibition__card-description">
-                    Interact directly with school administrators and teachers.
-                  </p>
-                </div>
+                <h3 class="school-selection__card-title">
+                  Get Exclusive Fee Structures & Offers
+                </h3>
+                <p class="school-selection__card-description">
+                  Access transparent information and avail offers
+                </p>
               </article>
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=400&fit=crop"
-                    alt="Curriculum information"
-                    class="exhibition__image"
-                  />
+              <article class="school-selection__card" role="listitem">
+                <div class="school-selection__icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 22V12h6v10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 2v6h6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Curriculum Info</h3>
-                  <p class="exhibition__card-description">
-                    Understand different curricula and teaching methodologies.
-                  </p>
-                </div>
+                <h3 class="school-selection__card-title">
+                  Explore Schools Offerings
+                </h3>
+                <p class="school-selection__card-description">
+                  Preview infrastructure, co-curricular, teaching methodology
+                  and culture
+                </p>
               </article>
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=400&fit=crop"
-                    alt="Scholarship opportunities"
-                    class="exhibition__image"
-                  />
+              <article class="school-selection__card" role="listitem">
+                <div class="school-selection__icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="9"
+                      cy="7"
+                      r="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Scholarships</h3>
-                  <p class="exhibition__card-description">
-                    Discover scholarship opportunities and financial aid
-                    options.
-                  </p>
-                </div>
-              </article>
-              <article class="exhibition__card" role="listitem">
-                <div class="exhibition__card-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop"
-                    alt="Student achievements"
-                    class="exhibition__image"
-                  />
-                </div>
-                <div class="exhibition__card-content">
-                  <h3 class="exhibition__card-title">Student Achievements</h3>
-                  <p class="exhibition__card-description">
-                    View outstanding student accomplishments and success
-                    stories.
-                  </p>
-                </div>
+                <h3 class="school-selection__card-title">
+                  On-the-spot Counselling
+                </h3>
+                <p class="school-selection__card-description">
+                  Save time on application guidance
+                </p>
               </article>
             </div>
             <div
-              class="exhibition__controls"
+              class="school-selection__controls"
               role="group"
-              aria-label="Exhibition slider controls"
+              aria-label="Slider controls"
             >
               <button
-                class="exhibition__control-btn exhibition__control-btn--prev"
+                class="school-selection__control-btn school-selection__control-btn--prev"
                 aria-label="Previous slide"
                 type="button"
               >
@@ -771,19 +939,18 @@
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  aria-hidden="true"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
                   <path
-                    d="M15 18L9 12L15 6"
-                    stroke="currentColor"
-                    stroke-width="2"
+                    d="M15 18l-6-6 6-6"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
               </button>
               <button
-                class="exhibition__control-btn exhibition__control-btn--next"
+                class="school-selection__control-btn school-selection__control-btn--next"
                 aria-label="Next slide"
                 type="button"
               >
@@ -792,12 +959,11 @@
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  aria-hidden="true"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
                   <path
-                    d="M9 18L15 12L9 6"
-                    stroke="currentColor"
-                    stroke-width="2"
+                    d="M9 18l6-6-6-6"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
@@ -810,9 +976,194 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__container">
+      <div class="footer__main">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__logo logo__box">
+              <img src="imgs/logo.jpg" alt="Premier Schools Exhibition Logo" />
+            </div>
+
+            <div class="footer__info">
+              <div class="footer__info-item">
+                <div class="footer__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="footer__info-content">
+                  <h3 class="footer__info-heading">Corporate Office:</h3>
+                  <p class="footer__info-text">
+                    Suite B-5, Ballygunge Park Tower, 67B Ballygunge Circular
+                    Road, Kolkata - 700019
+                  </p>
+                </div>
+              </div>
+
+              <div class="footer__info-item">
+                <div class="footer__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="footer__info-content">
+                  <h3 class="footer__info-heading">Ahmedabad Office:</h3>
+                  <p class="footer__info-text">
+                    12/AA, Swastik Chambers, Near CU Shah College, Ashram Road,
+                    Ahmedabad - 380009
+                  </p>
+                </div>
+              </div>
+
+              <div class="footer__info-item">
+                <div class="footer__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="footer__info-content">
+                  <h3 class="footer__info-heading">Call us on</h3>
+                  <p class="footer__info-text">
+                    <a href="tel:9674805912" class="footer__link">9674805912</a
+                    ><br />
+                    <a href="tel:9674585012" class="footer__link">9674585012</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="footer__social">
+                <h3 class="footer__info-heading">Follow us on</h3>
+                <div class="footer__social-icons">
+                  <a
+                    href="#"
+                    class="footer__social-icon"
+                    aria-label="Instagram"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="2"
+                        y="2"
+                        width="20"
+                        height="20"
+                        rx="5"
+                        ry="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <line
+                        x1="17.5"
+                        y1="6.5"
+                        x2="17.51"
+                        y2="6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="footer__social-icon" aria-label="Facebook">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="footer__social-icon" aria-label="YouTube">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <polygon
+                        points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
         <p class="footer__text">
-          &copy; 2025 Premier Schools Exhibition. All rights reserved.
+          Copyright 2025 | All rights reserved. Premier Schools Exhibition
         </p>
       </div>
     </footer>

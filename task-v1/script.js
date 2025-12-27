@@ -502,6 +502,135 @@
     }
 
     // ============================================
+    // School Selection Slider
+    // ============================================
+
+    class SchoolSelectionSlider {
+        constructor() {
+            this.slider = document.querySelector('.school-selection__slider');
+            this.track = document.querySelector('.school-selection__track');
+            this.cards = document.querySelectorAll('.school-selection__card');
+            this.controls = {
+                prev: document.querySelector('.school-selection__control-btn--prev'),
+                next: document.querySelector('.school-selection__control-btn--next')
+            };
+            this.currentIndex = 0;
+            this.cardsPerView = this.getCardsPerView();
+            this.totalSlides = Math.ceil(this.cards.length / this.cardsPerView);
+
+            if (this.slider) {
+                this.init();
+            }
+
+            // Recalculate on resize
+            window.addEventListener('resize', () => {
+                this.cardsPerView = this.getCardsPerView();
+                this.totalSlides = Math.ceil(this.cards.length / this.cardsPerView);
+                this.currentIndex = 0;
+                this.updateSlider();
+            });
+        }
+
+        getCardsPerView() {
+            const width = window.innerWidth;
+            if (width <= 480) return 1;
+            if (width <= 768) return 2;
+            if (width <= 1024) return 3;
+            return 5;
+        }
+
+        init() {
+            // Control buttons
+            if (this.controls.prev) {
+                this.controls.prev.addEventListener('click', () => this.prevSlide());
+            }
+            if (this.controls.next) {
+                this.controls.next.addEventListener('click', () => this.nextSlide());
+            }
+
+            // Keyboard navigation
+            this.slider.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.nextSlide();
+                }
+            });
+
+            // Touch/swipe support
+            this.initSwipe();
+
+            this.updateSlider();
+        }
+
+        initSwipe() {
+            if (!this.track) return;
+
+            let startX = 0;
+            let isDragging = false;
+
+            this.track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }, { passive: true });
+
+            this.track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+            }, { passive: false });
+
+            this.track.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+
+                const endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+            }, { passive: true });
+        }
+
+        goToSlide(index) {
+            this.currentIndex = Math.max(0, Math.min(index, this.totalSlides - 1));
+            this.updateSlider();
+        }
+
+        nextSlide() {
+            if (this.currentIndex < this.totalSlides - 1) {
+                this.currentIndex++;
+            } else {
+                this.currentIndex = 0;
+            }
+            this.updateSlider();
+        }
+
+        prevSlide() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+            } else {
+                this.currentIndex = this.totalSlides - 1;
+            }
+            this.updateSlider();
+        }
+
+        updateSlider() {
+            if (!this.track) return;
+
+            const cardWidth = 100 / this.cardsPerView;
+            const translateX = this.currentIndex * cardWidth;
+            this.track.style.transform = `translateX(-${translateX}%)`;
+        }
+    }
+
+    // ============================================
     // Form Handling
     // ============================================
 
@@ -578,6 +707,7 @@
         new HeroSlider();
         new ChooseSchoolSlider();
         new ExhibitionSlider();
+        new SchoolSelectionSlider();
         initForm();
         handleReducedMotion();
 
