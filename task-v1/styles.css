@@ -497,6 +497,8 @@ textarea.hero__form-input {
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .schools-logos__track--left {
@@ -536,19 +538,19 @@ textarea.hero__form-input {
 
 @keyframes slideLogosLeft {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @keyframes slideLogosRight {
   0% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
