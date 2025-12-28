@@ -154,7 +154,7 @@ body {
 
 .logo__box.header__logo {
   position: absolute;
-  left: 0;
+  left: var(--spacing-lg);
   top: 0;
 }
 
