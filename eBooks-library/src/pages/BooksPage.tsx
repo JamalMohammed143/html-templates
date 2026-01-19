@@ -4,7 +4,7 @@ import { t } from "../config/i18n";
 import { useInfiniteBooks } from "../hooks/useInfiniteBooks";
 import BookCard from "../components/BookCard";
 
-const SEARCH_DEBOUNCE_MS = 350;
+const SEARCH_DEBOUNCE_MS = 500;
 
 export function BooksPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -14,7 +14,7 @@ export function BooksPage() {
   const [searchInput, setSearchInput] = useState(search);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const { books, loading, error, hasMore, loadMore } = useInfiniteBooks({
+  const { books, loading, loadingMore, error, hasMore, loadMore } = useInfiniteBooks({
     topic,
     search,
   });
@@ -51,16 +51,20 @@ export function BooksPage() {
 
   useEffect(() => {
     const el = sentinelRef.current;
-    if (!el || !hasMore || loading) return;
+    if (!el || !hasMore) return;
+
     const obs = new IntersectionObserver(
       (entries) => {
-        if (entries[0]?.isIntersecting) loadMore();
+        // Only trigger if intersecting, has more, and not currently loading
+        if (entries[0]?.isIntersecting && hasMore && !loading && !loadingMore) {
+          loadMore();
+        }
       },
       { rootMargin: "200px", threshold: 0 }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [hasMore, loadMore, loading]);
+  }, [hasMore, loadMore, loading, loadingMore]);
 
   return (
     <div className="min-h-screen bg-white">

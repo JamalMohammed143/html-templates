@@ -1,7 +1,7 @@
 
 import type { Book } from "../types/book";
 import { t } from "../config/i18n";
-// import { getViewableBookUrl } from "../utils/formatUtils";
+import { getViewableBookUrl } from "../utils/formatUtils";
 
 function getCoverUrl(formats: Record<string, string>): string | null {
     if (!formats) return null;
@@ -21,13 +21,13 @@ function BookCard({
     book: Book;
     onOpen: (url: string) => void;
 }) {
-    const viewable = book.formats[0];
+    const viewableUrl = getViewableBookUrl(book.formats);
     const cover = getCoverUrl(book.formats);
-    const authors = book.authors?.map((a) => a.name).join(", ") || "—";
+    const authors = book.authors[0].name;
 
     const handleClick = () => {
-        if (viewable) {
-            onOpen(viewable);
+        if (viewableUrl) {
+            onOpen(viewableUrl);
         } else {
             alert(t("books.error.viewable"));
         }

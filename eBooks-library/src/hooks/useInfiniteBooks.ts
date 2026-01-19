@@ -10,6 +10,7 @@ export interface UseInfiniteBooksOptions {
 export interface UseInfiniteBooksResult {
   books: Book[];
   loading: boolean;
+  loadingMore: boolean;
   error: string | null;
   hasMore: boolean;
   loadMore: () => void;
@@ -60,8 +61,6 @@ export function useInfiniteBooks({
   }, [fetchPage]);
 
   const loadMore = useCallback(() => {
-    console.log("loadMore", nextUrl);
-
     if (!nextUrl || isLoadingMore) return;
     setIsLoadingMore(true);
     fetchPage(nextUrl).then((res) => {
@@ -86,6 +85,7 @@ export function useInfiniteBooks({
   return {
     books,
     loading,
+    loadingMore: isLoadingMore,
     error,
     hasMore,
     loadMore,
