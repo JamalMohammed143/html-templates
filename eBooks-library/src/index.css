@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@theme {
+  /* Primary palette */
+  --color-primary: #5E56E7;
+  --color-primary-50: #F8F7FF;
+  --color-primary-100: #F8F7FF;
+  --color-primary-200: #E8E7FF;
+  --color-primary-300: #D3D1EE;
+  --color-primary-400: #BDBAF7;
+  --color-primary-500: #5E56E7;
+  --color-primary-600: #4039B3;
+  --color-primary-700: #4039B3;
+  --color-primary-800: #5E56E7;
+  --color-primary-900: #333333;
+
+  /* Greys */
+  --color-grey-light: #F0F0F6;
+  --color-grey-medium: #A0A0A0;
+  --color-grey-dark: #333333;
+
+  /* Neutral / surface */
+  --color-surface: #F8F7FF;
+  --color-surface-elevated: #ffffff;
+  --color-muted: #A0A0A0;
+  --color-border: #F0F0F6;
+
+  /* Typography - Montserrat font */
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Montserrat", ui-serif, Georgia, serif;
+}
+
+/* Base document - human, readable typography */
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-surface);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Optional: reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
