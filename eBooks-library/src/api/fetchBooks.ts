@@ -1,13 +1,3 @@
-/**
- * Gutendex API client.
- * Base: http://skunkworks.ignitesol.com:8000/
- *
- * Query params: ids, languages, mime_type, search, topic.
- * - mime_type=image/ : only books that have at least one image (covers).
- * - topic: case-insensitive match in bookshelves or subjects.
- * - search: case-insensitive in author names and titles.
- */
-
 import { API_BASE_URL } from "../config/constants";
 import type { BooksResponse } from "../types/book";
 
@@ -16,7 +6,6 @@ export interface FetchBooksParams {
     search?: string;
     page?: string | null;
 }
-
 
 export async function fetchBooks(params: FetchBooksParams): Promise<BooksResponse> {
     let url: URL;
